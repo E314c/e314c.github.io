@@ -1,0 +1,26 @@
+{
+  "name": "E314c.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.0.0",
+    "node-sass": "^4.9.2"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build-styles",
+    "build:style": "node-sass src/style/index.scss static/style.css --source-map true",
+    "build:style:watch": "npm run build:style -- --watch",
+    "clean": "rm -f static/style.css static/style.css.map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/E314c/E314c.github.io.git"
+  },
+  "author": "E314c",
+  "bugs": {
+    "url": "https://github.com/E314c/E314c.github.io/issues"
+  },
+  "homepage": "https://github.com/E314c/E314c.github.io#readme"
+}

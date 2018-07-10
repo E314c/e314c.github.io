@@ -1,0 +1,20 @@
+@import './fonts.scss';
+
+* {
+    box-sizing: border-box;
+    @include font-regular;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    text-decoration: none;
+}
