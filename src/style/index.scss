@@ -1,0 +1,44 @@
+@import './globals.scss';
+
+// components:
+@import './buttonBar.scss';
+@import './e314c-logo.scss';
+
+body {
+    background-image: linear-gradient(#48F, #FF0,#F40);
+    background-image: url('./imgs/VintageSunset.JPG');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 3px;   
+}
+
+
+.page {
+    width: 100%;
+    max-width: 500px;
+    
+    @media #{$mq-large}{
+        width: 40%;
+    }
+}
+
+
+/*
+.grid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.row {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+*/

@@ -1,0 +1,41 @@
+@import './media-queries.scss';
+
+.button-bar {
+    display: flex;
+    flex-direction: column;
+    
+    @media #{$mq-large}{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.8rem;
+    color: #DDD;
+    background-color: rgba(0,0,0,0.5);
+    
+    border: 2px black solid;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 2px 5px -1px rgba(0,0,0,0.5);
+    
+    // States
+    &:hover{
+        background-color: rgba(0,0,0,0.8);
+        box-shadow: 0 1px 2px -1px rgba(0,0,0,0.5);
+    }
+    &:active{
+        background-color: rgba(0,0,0,1);
+        box-shadow: 0 0 1px -1px rgba(0,0,0,0.5);
+    }
+
+    margin-top: 10px;
+    @media #{$mq-large} {
+        margin: 0;
+    }
+}

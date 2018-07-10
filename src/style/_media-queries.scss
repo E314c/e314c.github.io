@@ -1,0 +1,5 @@
+$bp-medium: 500px;
+$bp-large: 850px;
+
+$mq-medium: 'screen and (min-width: #{$bp-medium})';
+$mq-large: 'screen and (min-width: #{$bp-large})';
