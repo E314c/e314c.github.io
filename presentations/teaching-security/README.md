@@ -1,6 +1,11 @@
 # Security Teaching
 __Those who can't do: teach.__
 
+## Course materials (?)
+I've been developping a script to set up a testing environment to try all of this in your own time:
+[https://github.com/E314c/E134cSecurityBoxes](https://github.com/E314c/E134cSecurityBoxes)
+Check it out and play along. It contains the scripts that will be mentioned in the presentations and any demos will be based on this environment.
+
 ## Sylabus
 ### 1. PWK, OSCP, WTF
 This is mainly just meant as a quick introduction to what I'm intending to teach, the kind of things I want to cover and some terminology that people might need to be aware of
@@ -18,3 +23,4 @@ This presentation covers some basics of networking on a compute, including how a
 
 ### 5. ARP poisoning and Man-In-The-Middle attacks
 This is mainly a short presentation for the demonstartion of a MITM attack using ARP spoofing over a LAN connection
+
