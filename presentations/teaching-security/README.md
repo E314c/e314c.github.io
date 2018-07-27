@@ -12,3 +12,9 @@ I'm also working on a system that i'll hopefully be releasing that'll make this 
 
 ### 3. A few linux basics
 In Kali (and hacking in general), it's good to know some of the more fundemental ways of working with linux to get the things you want. This presentation is mainly to go through things like `grep`, `ps`, terminal re-direction and other things you'll want to know when navigating and investigating a linux system.
+
+### 4. Networking is important in the tech industry
+This presentation covers some basics of networking on a compute, including how a packet is addressed at different levels of the OSI system.
+
+### 5. ARP poisoning and Man-In-The-Middle attacks
+This is mainly a short presentation for the demonstartion of a MITM attack using ARP spoofing over a LAN connection
