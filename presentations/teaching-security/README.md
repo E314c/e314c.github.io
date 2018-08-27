@@ -18,9 +18,31 @@ I'm also working on a system that i'll hopefully be releasing that'll make this 
 ### 3. A few linux basics
 In Kali (and hacking in general), it's good to know some of the more fundemental ways of working with linux to get the things you want. This presentation is mainly to go through things like `grep`, `ps`, terminal re-direction and other things you'll want to know when navigating and investigating a linux system.
 
+
 ### 4. Networking is important in the tech industry
 This presentation covers some basics of networking on a compute, including how a packet is addressed at different levels of the OSI system.
+
 
 ### 5. ARP poisoning and Man-In-The-Middle attacks
 This is mainly a short presentation for the demonstartion of a MITM attack using ARP spoofing over a LAN connection
 
+
+### 6. Recon - Technical information
+This presentation is focussed on passive information gathering and OSINT, particularly relating to the technical aspects of a target, such as registered domains, IP addresses, hosting providers, etc.
+
+
+### 7. Recon - The social side
+A quick review of the kinda of personal information one can glean about a target from opensource locations. This information may provide the grounds for a spear phising campaign.
+
+
+
+## Expanding your learning:
+### Exploit Development - Sam Bowne
+[https://samsclass.info/127/127_S17.shtml](https://samsclass.info/127/127_S17.shtml)   
+Sam Bowne has uploaded his `CNIT 127: Exploit Development Course` and videos of lectures and projects are all available online.  
+Highly recommended for those wanting to learn about low level program design and exploitation as it covers Linux drivers, Windows drivers, assembly, shellcode and exploitation of compiled binaries.
+
+### Over the wire
+[Over the wire - wargames](http://overthewire.org/wargames/)  
+Over the wire has a series of "wargames": games based around technical puzzles where the aim is to retrieve a secret from a system that will enable you to log into the next.  
+There are SSH/CLI based games, webapp ones and more, all available free and without having to install anything on your local machine.
