@@ -13,7 +13,14 @@ $logo-aspect: 294/105;
         object-fit: contain;
         width: 100%;
         height: 100%;
+        filter: drop-shadow(0 3px 1.5px rgba(20, 10, 10, 0.5));
+        transition: filter 1s, fill 1.5s;
+        &:hover{
+            fill: #ff0064;
+            filter: drop-shadow(0 3px 5px rgba(20, 10, 10, 0.5));
+        }
     }
+
 
     &:after{
       display: block;
