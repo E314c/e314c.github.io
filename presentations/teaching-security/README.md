@@ -32,9 +32,16 @@ This presentation is focussed on passive information gathering and OSINT, partic
 
 
 ### 7. Recon - The social side
-A quick review of the kinda of personal information one can glean about a target from opensource locations. This information may provide the grounds for a spear phising campaign.
+A quick review of the kind of personal information one can glean about a target from opensource locations. This information may provide the grounds for a spear phising campaign.
 
+### 8. Active and Vulnerability Scanning
+Active scanning will actually contact the target's infrastructure, which can give you access to more technical information, but also more likely to be detected. The talk goes through some use of some common tools, like nmap and sqlmap.
 
+### 9. Popping Shells and shellcode
+A quick introduction to shellcode, what it is and how you can write your own.
+
+### 10. Buffer Overflows
+Discusses the anatomy of a buffer overflow flaw, how it's exploited and possible remedies. It also discusses some of the standard variants and a breif description of Return-Oriented-Programming.
 
 ## Expanding your learning:
 ### Exploit Development - Sam Bowne
