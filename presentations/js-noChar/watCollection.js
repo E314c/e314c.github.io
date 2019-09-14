@@ -71,11 +71,24 @@ const WATS = [
     },
     {
         wtf:`+[]`,
-        explanation: 'The numeric value of an empty array is 0'
+        explanation: 'The numeric value of an empty array is 0',
+        category: 'standard_coercion'
     },
+    {
+        wtf: `+'a'`,
+        explanation: '"a" can\'t be converted to a base 10 number',
+        category: 'standard_coercion'
+    }, 
+    {
+        wtf:`+{}`,
+        explanation: 'While +[] works, +{} is not a number',
+        category: 'standard_coercion'
+    },
+    {
+        wtf: `typeof NaN`,
+        category: 'crazy_types'
+    }
     /*/
-    `+'a'`,
-    `+{}`,
     `1 + + '1'`,
     `!true`,
     `!0`,

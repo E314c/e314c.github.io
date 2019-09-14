@@ -152,12 +152,19 @@
             }
         }
 
+        function stringify(val) {
+            if(isNaN(val)){
+                return 'NaN';
+            }
+            return JSON.stringify(val);
+        }
+
         async function startWtf(wtf) {
             cleanWtf();
             await sleep(SEQUENCE_TIME * 0.05);
             wtfElement.innerText = wtf.wtf;
             await sleep(SEQUENCE_TIME * 0.25);
-            resultElement.innerText= JSON.stringify(eval(wtf.wtf));
+            resultElement.innerText= stringify(eval(wtf.wtf));
             await sleep(SEQUENCE_TIME * 0.2);
             explanationElement.innerText = wtf.explanation || '--obvious--';
             await sleep(SEQUENCE_TIME * 0.5);
