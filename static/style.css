@@ -16,7 +16,8 @@ a {
 
 .button-bar {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   @media screen and (min-width: 850px) {
     .button-bar {
       flex-direction: row;
@@ -26,6 +27,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 1.3rem;
   padding: 0.5rem 0.8rem;
   color: #DDD;
@@ -43,7 +45,7 @@ a {
     box-shadow: 0 0 1px -1px rgba(0, 0, 0, 0.5); }
   @media screen and (min-width: 850px) {
     .button {
-      margin: 0; } }
+      margin: 0px 5px; } }
 
 .e314c-logo {
   display: flex;

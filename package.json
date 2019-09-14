@@ -9,6 +9,7 @@
     "node-sass": "^4.9.2"
   },
   "scripts": {
+    "start": "node dev/server.js",
     "build": "npm run clean && npm run build:style",
     "build:style": "node-sass src/style/index.scss static/style.css --source-map true",
     "build:style:watch": "npm run build:style -- --watch",

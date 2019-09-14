@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>wtfjs?</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/static/style.css" /> -->
+    <script src="/presentations/js-noChar/watCollection.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+            text-align: center;
+
+            font-family: 'Courier New', Courier, monospace;
+            color: #DDD;
+            text-shadow: rgba(0,0,0,0.5) 0px 0px 0.5rem;
+        }
+        .page {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            height: 100%;
+            width: 100%;
+
+            background-color: #222;
+
+        }
+
+        .wtf {
+            height: 40%;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            color: #A98;
+            font-size: 4rem;
+        }
+        .result {
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .explanation {
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            font-size: 1rem;
+        }
+        .e314c-logo {
+            display:block;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            height: 7%;
+            min-height: 2rem;
+            fill: #f40058;
+        }
+        .e314c-logo>svg {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+            filter: drop-shadow(0 3px 1.5px rgba(20, 10, 10, 0.5));
+        }
+
+
+    </style>
+    <div class="page">
+        <div class="wtf"> 
+            <span id=wtf>[] != []</span>
+        </div>
+        <div class="result">
+            <span id=result>true</span>
+        </div>
+        <div class="explanation">
+            <span id=explanation>[] is evaluated as '', ![] becomes false and '' is falsy</span>
+        </div>
+        <a class="e314c-logo" href="/">
+            <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
+                xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" viewBox="0 0 294.00001 105" height="105" width="294">
+                <g transform="translate(0,-947.3622)" id="layer1">
+                    <path
+                        d="m 50.790697,1012.9668 -19.209303,0 0,-26.20929 36.790698,0 -17.581395,26.20929 z m 15.627909,39.3954 -66.418606,0 0,-105.00004 66.418606,0 L 84,973.57146 l -57.627908,0 0,52.58144 57.627908,0 -17.581394,26.2093 z"
+                        style="stroke:none;" id="path3380" />
+                    <path
+                        d="m 210,973.57146 0,-13.18604 q 0,-5.20931 3.90697,-9.11628 3.90697,-3.90698 9.27908,-3.90698 l 53.23255,0 17.5814,26.2093 -84,0 z m 66.4186,78.79074 -53.23255,0 q -5.37211,0 -9.27908,-3.907 Q 210,1044.5482 210,1039.1762 l 0,-60.39543 26.37209,0 0,47.37213 57.62791,0 -17.5814,26.2093 z"
+                        style="stroke:none;" id="path3384" />
+                </g>
+                <g transform="translate(0,-947.3622)" style="opacity:1" id="layer2">
+                    <rect y="978.86218" x="110" height="73.5" width="26" id="rect3373" style="stroke:none;" />
+                    <path id="rect3401" transform="translate(0,947.3622)" d="m 84,0 17.53711,26 105,0 L 189,0 84,0 Z"
+                        style="stroke:none;" />
+                    <path id="rect3377" d="m 158,978.8622 v 60.5 c 0,7.1797 5.8203,13 13,13 h 13 l 17.53711,-26 H 184 v -47.5 z"
+                        style="stroke:none;" />
+                </g>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        //-- Settings --//
+        const SEQUENCE_TIME = 7 * 1000;
+        const RANDOM = false;
+
+        //-- References -- //
+        const wtfElement = document.querySelector("#wtf");
+        const resultElement = document.querySelector("#result");
+        const explanationElement = document.querySelector("#explanation");
+
+        let nextResolve;
+        let currentTimeout;
+
+        // -- Functions --//
+        function cleanWtf(){
+            wtfElement.innerText = '';
+            resultElement.innerText = '';
+            explanationElement.innerText = '';
+        }
+
+        const sleep = t => new Promise(resolve => {
+            nextResolve = resolve;
+            currentTimeout = setTimeout(resolve,t);
+        });
+
+        const pause = () => {
+            clearTimeout(currentTimeout);
+            currentTimeout = undefined;
+        };
+        const unpause = () => nextResolve();
+
+        const togglePause = () => {
+            if(currentTimeout) {
+                pause();
+            } else {
+                unpause();
+            }
+        }
+
+        function stringify(val) {
+            if(isNaN(val)){
+                return 'NaN';
+            }
+            return JSON.stringify(val);
+        }
+
+        async function startWtf(wtf) {
+            cleanWtf();
+            await sleep(SEQUENCE_TIME * 0.05);
+            wtfElement.innerText = wtf.wtf;
+            await sleep(SEQUENCE_TIME * 0.25);
+            resultElement.innerText= stringify(eval(wtf.wtf));
+            await sleep(SEQUENCE_TIME * 0.2);
+            explanationElement.innerText = wtf.explanation || '--obvious--';
+            await sleep(SEQUENCE_TIME * 0.5);
+        }
+
+        function getNextWatIndex(currentIndex) {
+            if(RANDOM){ 
+                return Math.floor(Math.random() * WATS.length)
+            }
+            return ((currentIndex + 1) >= WATS.length) ? 0 : currentIndex + 1 ;
+        }
+
+        // -- Attach event listeners --//
+        document.body.addEventListener('click', togglePause);
+
+        // -- Main -- //
+        (async function (){
+            let nextWatIndex= 0;
+            while(1) {
+                nextWatIndex = getNextWatIndex(nextWatIndex);
+                await startWtf(WATS[nextWatIndex]);
+            }
+        })()
+    
+    </script>
+</body>
+
+</html>
