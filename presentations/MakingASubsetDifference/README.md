@@ -25,7 +25,7 @@ You can see implementations of (parts of) the AACS specification on another of m
   - so they _could_ assign a node to each device produced, but it's easier for the Licensing agency and manufacturer to deal in a small set of devices at a time.
 
 ## Delivered @
-- BSides Manchester 2019: (link will be posted when video is uploaded)
+- BSides Manchester 2019: https://www.youtube.com/watch?v=i0ofXHu2lqY
 
 ## Misc
 I've included a `.ppsx` file alongside the usual `.pdf` for this presentation, as it contains a lot of animations that people might find useful.

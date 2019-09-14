@@ -8,3 +8,8 @@ Particularly the `automatedWats.js` file, which automates the section I _would_ 
 All scripts are self running (and totes harmless, I promise).
 
 `consoleProcessEnv.fuck.js` is just `console.log(process.env)` written and executed via jsfuck.
+
+## Delivered @
+- DC151 (No recording)
+- LeedsJs : https://www.youtube.com/watch?v=hkQBBCvVJCY
+- AmsterdamJs: https://youtu.be/-GI2jlZ6MUw?t=2370
