@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "express": "^4.0.0",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "start": "node dev/server.js",
