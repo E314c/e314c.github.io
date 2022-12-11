@@ -5,7 +5,7 @@
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
-    "express": "^4.0.0",
+    "express": "^4.17.3",
     "node-sass": "^4.13.1"
   },
   "scripts": {
